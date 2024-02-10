@@ -11,7 +11,7 @@ class Cl_Movimiento {
             return this.saldoAnterior + this.monto
         else
             if (this.tipo === 2)
-                return this.acumSaldo -= this.monto
+                return this.saldoAnterior -= this.monto
     }
 
 
