@@ -1,9 +1,9 @@
 class Cl_Movimiento {
-    constructor(descripcion, tipo) {
+    constructor(descripcion, tipo, monto) {
         this.descripcion = descripcion
         this.tipo = tipo
-        this.monto = 0
-        this.saldoAnterior = 0
+        this.monto = monto
+        this.saldoAnterior = 100
     }
     SaldoAcumulado() {
 
@@ -11,29 +11,28 @@ class Cl_Movimiento {
             return this.saldoAnterior + this.monto
         else
             if (this.tipo === 2)
-                return this.saldoAnterior - this.monto
+                return this.acumSaldo -=movimiento.monto
     }
 
 
 
 }
 
-
 class Cl_CuentaBan {
     constructor() {
-        this.saldoIni = this.saldoIni
+        this.saldoIni = 100
         this.acumSaldo = 0
 
     }
     procesar(movimiento) {
         movimiento.saldoAnterior = this.acumSaldo
+
         if (movimiento.tipo === 1)
             this.acumSaldo += movimiento.monto
         else
 
-            movimiento.saldoAnterior = this.acumSaldo
-        if (movimiento.tipo === 2)
-            this.acumSaldo -= movimiento.monto
+            if (movimiento.tipo === 2)
+                this.acumSaldo -= movimiento.monto
     }
 }
 let CuentaBan = new Cl_CuentaBan()
