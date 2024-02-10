@@ -37,8 +37,8 @@ class Cl_CuentaBan {
 }
 let CuentaBan = new Cl_CuentaBan()
 
-let movimiento1 = new Cl_Movimiento("pago", 1, 200)
-let movimiento2 = new Cl_Movimiento("débito", 2, 500)
+let movimiento1 = new Cl_Movimiento("pago", 1, 300)
+let movimiento2 = new Cl_Movimiento("débito", 2, 150)
 let movimiento3 = new Cl_Movimiento("pago", 1, 60)
 let movimiento4 = new Cl_Movimiento("débito", 2, 100)
 
